@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>layout_Ex</title>
+  <style>
+    body {
+      margin-bottom: 50px;
+      background-image: url(./assets/images/webEx.png);
+    }
+    .wrapper {
+      border: 4px solid #eeb0b0;
+      width: 932px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+    header {
+      background-color: #7d1e6a;
+      color: #fff;
+      width: 932px; height: 130px;
+      display: flex;
+    }
+    .nav {
+      background-color: #ffcd38;
+      width: 932px; height: 47px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .container {
+      background-color: #ddd;
+      display: flex;
+    }
+    .content {
+      background-color: #f1eee9;
+      width: 651px; height: 610px;
+    }
+    .aside {
+      background-color: #fff;
+      width: 281px; height: 610px;
+    }
+    .nav ul {
+      margin: 0; padding: 0;
+      list-style: none;
+    }
+    .nav ul li {
+      padding: 20px;
+      display: inline;
+      justify-content: space-evenly;
+    }
+    .nav ul li a {
+      color: #7d1e6a;
+      text-decoration: none;
+    }
+    .footer {
+      background-color: #7d1e6a;
+      font-size: 1rem;
+      color: #fff;
+      height: 34px;
+      display: flex;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+      <header class="header">
+        <h1><em>Kim's Kitchen</em></h1>
+      </header>
+      <nav class="nav">
+        <ul>
+         <li><a href="#">홈</a></li>
+         <li><a href="#">소개</a></li>
+         <li><a href="#">교실</a></li>
+         <li><a href="#">케이터링</a></li>
+         <li><a href="#">연락처</a></li>
+        </ul>
+        </nav>
+      <section class="container">
+        <div class="content">
+        <article>article</article>
+        </div>
+        <aside class="aside">aside</aside>
+        </section>
+      <footer class="footer">©Kim's Kitchen김씨네 키친</footer>
+  </div>
+</body>
+</html>
