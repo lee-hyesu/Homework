@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>mqEx1</title>
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <style>
+    body {
+      font-size: 2rem;
+      font-weight: bold;
+      margin: 0;
+      text-align: center;
+    }
+
+    .wrapper {
+      height: 100vh;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr)
+    }
+
+    .wrapper .item1 {
+      background-color: #1679AB;
+      color: #fff
+    }
+
+    .wrapper .item2 {
+      background-color: #5BBCFF;
+    }
+
+    .wrapper .item3 {
+      background-color: #FFC94A;
+    }
+
+    @media screen and (min-width: 768px) {
+      body {
+        font-size: 1.5rem;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .wrapper .item2 {
+        grid-column: span 2;
+      }
+
+      .wrapper .item3 {
+        grid-column: span 3;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      body {
+        font-size: 1.2rem;
+      }
+      .wrapper {
+        display: flex;
+      }
+      
+      .wrapper .item {
+        width: 100%;
+      }
+      .wrapper .item1 { flex: 2 0 0;}
+      .wrapper .item2 { flex: 3 0 0;}
+      .wrapper .item3 { flex: 1 0 0;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+  </div>
+</body>
+
+</html>
