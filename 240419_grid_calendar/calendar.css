@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+:root {
+  --color-bg: #fff1f8;
+  
+  --color-box-g: #d1ffe6;
+  --color-box-p: #ffd6d1;
+  --color-box-y: #fafaa3;
+  --color-box-b: #e2f8ff;
+  --border-color: #f2d3d8;
+
+  --font-lg: 3rem;
+  --font-sm: 1rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin: 82px 35px 0 20px;
+}
+.container .timeline {
+  display: grid;
+  grid-template-rows: repeat(10, 55px);justify-items: end;
+}
+.container .contents {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 5px;
+}
+.container .contents .day {
+  background-color: #fff1f8;
+}
+.container .contents .day .date {
+  display: flex;
+}
+.container .contents .day .box {
+  display: grid;
+  grid-template-rows: repeat(10, 55px);
+}
+.container .contents .day .box .schedule {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px;
+}
+
+/* contents */
+.securities {
+  background-color: var(--color-box-g);
+  grid-row: 5 / 8;
+}
+.corporate {
+  background-color: var(--color-box-p);
+  grid-row: 1 / 3;
+}
+.enter {
+  background-color: var(--color-box-y);
+  grid-row: 4 / 7;
+}
+.writing {
+  background-color: var(--color-box-b);
+  grid-row: 3;
+}
+
+.container .contents .day .date .number {
+  font-size: var(--font-lg);
+  font-weight: bold;
+  display: inline;
+}
+.container .contents .day .date .date-day {
+  font-size: var(--font-lg);
+  font-weight: 200;
+  padding-left: 8px;
+}
+.container .contents .day .box .schedule .title {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.container .contents .day .box .schedule .sub {
+  font-size: var(--font-sm);
+}
+
+/* 스크린 가로 크기가 최대 768 이하면 적용 */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+  .container .contents .day .date {
+    background-color: #fff;
+    display: block;
+  }
+  .container .contents .day .date-day {
+    background-color: var(--color-bg);
+  }
+  .container .contents .day .date .number {
+    font-size: 2.5rem;
+  }
+  .container .contents .day .date .date-day {
+    font-size: var(--font-sm);
+  }
+.container .contents .day .box .schedule .sub {
+  font-size: 0.9rem;
+}
+}
+
+/* 스크린 가로 길이가 최대 414 이하면 적용 */
+@media (max-width: 414px) {
+  .container .timeline {
+    display: none;
+  }
+  .container .contents{
+    grid-template-columns: minmax(300px, 500px);
+    grid-template-rows: repeat(5, 458px);
+    gap: 58px;
+  }
+  .container .contents .day .date {
+    background-color: var(--color-bg);
+    display: flex;
+  }
+  .container .contents .day .date .number {
+    font-size: var(--font-lg);
+  }
+  .container .contents .day .date .date-day {
+    font-size: var(--font-lg);
+  }
+  .securities {
+    grid-row: 4 / 7;
+  }
+  .enter {
+    grid-row: 4 / 6;
+  }
+  .writing {
+    grid-row: 2;
+  }
+}
